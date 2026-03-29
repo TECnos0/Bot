@@ -1336,7 +1336,7 @@ async def start_servers():
         app,
         host="0.0.0.0",
         port=port,
-        log_level="warning",  # Use our custom logging
+        log_level="warning",
         access_log=False,
     )
     uvicorn_server = uvicorn.Server(config)
@@ -1363,10 +1363,10 @@ async def start_servers():
         await uvicorn_server.shutdown()
 
 def main():
-    """Main entry point - identical to TypeScript index.ts"""
+    """Main entry point"""
     try:
         asyncio.run(start_servers())
-    except KeyboardError:
+    except KeyboardInterrupt:
         logger.info("Shutdown complete")
     except Exception as e:
         logger.error("Fatal error", error=str(e))
@@ -1374,5 +1374,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-            
