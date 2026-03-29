@@ -1,0 +1,5 @@
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-telegram-bot[job-queue]==20.7
+structlog==23.2.0
+pydantic==2.5.0
