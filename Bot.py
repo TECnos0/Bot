@@ -989,8 +989,7 @@ async def auto_approve_command(update: Update, context: ContextTypes.DEFAULT_TYP
         me = await context.bot.get_me()
         await context.bot.send_message(
             chat_id,
-            f"⚠️ Start the bot in DM first.\n👉
-Click @{me.username} and press Start.",
+            f"⚠️ Start the bot in DM first.\n👉 Click @{me.username} and press Start.",
             reply_to_message_id=update.message.message_id
         )
         return
